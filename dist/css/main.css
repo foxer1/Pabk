@@ -8657,6 +8657,7 @@ a.thumbnail {
   .header .top-bar {
     background-color: #2B6CA3; }
     .header .top-bar .menu {
+      height: 1.5em;
       background-color: #2B6CA3; }
       .header .top-bar .menu li a {
         color: #fff; }
