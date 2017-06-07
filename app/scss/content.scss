@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+  //  background: url(../../app/imgs/bg.jpg) no-repeat center center fixed;
+  //  background-size: cover;
+}
+
+.content {
+        .sec1 {
+             background: url(../../app/imgs/baner.jpg) no-repeat center center fixed;
+             background-size: cover;
+             color: #fff;
+                 .description {
+                    background-color: #3D9BE9;                
+                }
+                .slogan {
+                    background-color: #207EA9;
+                }
+            }
+            .sec2 {
+               background-color: #242323;
+            }
+            .sec3 {
+                background-color: #CCCCCC;
+            }
+            .sec4 {
+                background-color: #A0A09F;
+            }
+            .sec5 {
+                background: url(../../app/imgs/tsup.jpg) no-repeat center center fixed;
+                background-size: cover;
+                position: relative;
+                color: #fff;
+                    .columns {
+                        z-index: 1;
+                    }
+                    &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 0px; left: 0px;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0,0,0,0.6);
+                    }
+            }
+            .sec6 {
+                background-color: #CCCCCC;
+            }
+            .sec7 {
+                color: #fff;
+                background-color: #242323;
+            }
+            .sec8 {
+                background-color: #cccccc;
+            }
+            .sec9 {
+                background-color: #ffffff;
+            }
+            .sec10 {
+                color: #fff;
+                background-color: #242323;
+            }
+            .sec11 {
+                background-color: #cccccc;
+            }
+}
+        
+.laws {
+    background: url(../../app/imgs/bg-stone.png) repeat center center;
+    padding: 2em 0;
+}
+.benefits {
+    padding: 2em 0;
+    background-color: #242323;
+    color: #fff;
+        .columns {
+            @include flex;
+            @include flex-direction(column);
+            @include flex-align(justify, middle);
+        }
+}
+            

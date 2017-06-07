@@ -1,0 +1,6 @@
+﻿@import 'node_modules/foundation-sites/assets/foundation';
+@include foundation-everything(true);
+
+@import 'header';
+@import 'content';
+@import 'footer';
