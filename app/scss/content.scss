@@ -1,26 +1,91 @@
 body {
-    margin: 0;
-  //  background: url(../../app/imgs/bg.jpg) no-repeat center center fixed;
-  //  background-size: cover;
+    overflow-x: hidden;
 }
 
+p, li {
+    @include breakpoint(large) {
+        font-size: 20px;
+    }
+    
+}
 .content {
+        .sec1, .sec2, .sec5, .sec7, .sec10 {
+            color: #fff;
+        }
         .sec1 {
              background: url(../../app/imgs/baner.jpg) no-repeat center center fixed;
              background-size: cover;
-             color: #fff;
+             padding-top: 4em;
+             padding-bottom: 4em;
                  .description {
-                    background-color: #3D9BE9;                
+                    background-color: #3D9BE9;  
+                    margin-bottom: 4em;
+                    position: relative;    
+                    padding: 1em;    
+                   height: 120px;    
+                   width: 500px;
+                   display: flex;
+                         &:before {
+                             content: "";
+                             position: absolute;
+                            bottom: -27px;
+                            left: 0;
+                            border-left: 30px solid transparent;
+                             border-top: 27px solid #207EA9;
+                             display: block;
+                             width: 0;
+                             height: 0;
+                         }
+                         &:after {
+                         content: "";
+                             display: block;
+                             position: absolute;
+                             right: -42px;
+                             top: 0;
+                             width: 0;
+                             height: 0;
+                             border-top: 60px solid transparent;
+                             border-left: 43px solid #3D9BE9;
+                             border-bottom: 60px solid transparent;
+                         }  
+                         @include breakpoint(small only) {
+                             width: 210px;
+                             margin: 0 auto;
+                             margin-bottom: 4em;
+                        }
                 }
                 .slogan {
                     background-color: #207EA9;
+                    position: relative;
+                    padding: 0.5em;
+                    height: 45px;
+                    width: 506px;
+                         &:after {
+                                 content: "";
+                                 position: absolute;
+                                 width: 0;
+                                 top: 44px;
+                                 left: 0;
+                                 height: 0;
+                                 border-left: 250px solid transparent;
+                                 border-right: 257px solid transparent;
+                                 border-top: 30px solid #207EA9;
+                         }
+                         @include breakpoint(small only) {
+                             width: 205px;
+                             height: 50px;
+                             margin: 0 auto;
+                             &:after {
+                                 top: 50px;
+                                 border-left: 105px solid transparent;
+                                 border-right: 100px solid transparent;
+                                 border-top: 30px solid #207EA9;
+                             }
+                        }
                 }
             }
-            .sec2 {
+            .sec2, .sec10 {
                background-color: #242323;
-            }
-            .sec3 {
-                background-color: #CCCCCC;
             }
             .sec4 {
                 background-color: #A0A09F;
@@ -29,7 +94,6 @@ body {
                 background: url(../../app/imgs/tsup.jpg) no-repeat center center fixed;
                 background-size: cover;
                 position: relative;
-                color: #fff;
                     .columns {
                         z-index: 1;
                     }
@@ -43,25 +107,20 @@ body {
                         background: rgba(0,0,0,0.6);
                     }
             }
-            .sec6 {
-                background-color: #CCCCCC;
-            }
             .sec7 {
-                color: #fff;
                 background-color: #242323;
+                    h5, .form-descr {
+                        color: $primary-color;
+                    }
             }
-            .sec8 {
+            .sec3, .sec6, .sec8, .sec11 {
                 background-color: #cccccc;
             }
             .sec9 {
                 background-color: #ffffff;
             }
-            .sec10 {
-                color: #fff;
-                background-color: #242323;
-            }
-            .sec11 {
-                background-color: #cccccc;
+            & > div {
+                padding: 1em;
             }
 }
         
