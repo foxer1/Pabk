@@ -13,7 +13,7 @@ p, li {
             color: #fff;
         }
         .sec1 {
-             background: url(../../app/imgs/baner.jpg) no-repeat center center fixed;
+             background: url(../../dist/imgs/baner.jpg) no-repeat center center fixed;
              background-size: cover;
              padding-top: 4em;
              padding-bottom: 4em;
@@ -22,8 +22,8 @@ p, li {
                     margin-bottom: 4em;
                     position: relative;    
                     padding: 1em;    
-                   height: 120px;    
-                   width: 500px;
+                    height: 120px;    
+                    width: 500px;
                    display: flex;
                          &:before {
                              content: "";
@@ -91,7 +91,7 @@ p, li {
                 background-color: #A0A09F;
             }
             .sec5 {
-                background: url(../../app/imgs/tsup.jpg) no-repeat center center fixed;
+                background: url(../../dist/imgs/tsup.jpg) no-repeat center center fixed;
                 background-size: cover;
                 position: relative;
                     .columns {
@@ -125,7 +125,7 @@ p, li {
 }
         
 .laws {
-    background: url(../../app/imgs/bg-stone.png) repeat center center;
+    background: url(../../dist/imgs/bg-stone.png) repeat center center;
     padding: 2em 0;
 }
 .benefits {
