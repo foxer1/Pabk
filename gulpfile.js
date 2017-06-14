@@ -5,6 +5,7 @@
     uglify = require('gulp-uglifyjs');  
     imagemin = require('gulp-imagemin'), 
     pngquant = require('imagemin-pngquant');
+    del = require('del');
 
 gulp.task('app-sass', function () {
     gulp.src('app/scss/main.scss')
@@ -48,13 +49,22 @@ gulp.task('watch', function () {
     gulp.watch('app/scss/**/*.scss', ['app-sass']);
 });
 
-gulp.task('build', ['app-sass', 'libs-scripts', 'app-scripts', 'img'], function () {
+gulp.task('clean', function() {
+    return del.sync('dist'); // Удаляем папку dist перед сборкой
+});
+
+gulp.task('serve', ['clean', 'app-sass', 'libs-scripts', 'app-scripts',], function () {
+
+});
+
+gulp.task('build', ['clean', 'app-sass', 'libs-scripts', 'app-scripts', 'img'], function () {
+
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
     .pipe(gulp.dest('dist'));
 
 });
 
-gulp.task('default', ['watch', 'build']);
+gulp.task('default', ['watch', 'serve']);
 gulp.task('clear', function () {
     return cache.clearAll();
 })
