@@ -1,4 +1,4 @@
-body {
+html, body {
     overflow-x: hidden;
 }
 
@@ -13,8 +13,9 @@ p, li {
             color: #fff;
         }
         .sec1 {
-             background: url(../../dist/imgs/dengi.jpg) no-repeat center center fixed;
+             background: url(../imgs/dengi.jpg) no-repeat center center fixed;
              background-size: cover;
+             background-attachment: scroll;
              padding-top: 4em;
              padding-bottom: 4em;
                  .description {
@@ -24,7 +25,7 @@ p, li {
                     padding: 1em;    
                     height: 120px;    
                     width: 500px;
-                   display: flex;
+                    display: flex;
                          &:before {
                              content: "";
                              position: absolute;
@@ -50,6 +51,11 @@ p, li {
                          }  
                          @include breakpoint(small only) {
                              width: 210px;
+                             margin: 0 auto;
+                             margin-bottom: 4em;
+                        }
+                        @include breakpoint(medium only) {
+                             width: 400px;
                              margin: 0 auto;
                              margin-bottom: 4em;
                         }
@@ -82,6 +88,15 @@ p, li {
                                  border-top: 30px solid #207EA9;
                              }
                         }
+                        @include breakpoint(medium only) {
+                             width: 420px;
+                             margin: 0 auto;
+                             &:after {
+                                 top: 45px;
+                                 border-left: 210px solid transparent;
+                                 border-right: 210px solid transparent;
+                             }
+                        }
                 }
             }
             .sec2, .sec10 {
@@ -91,7 +106,7 @@ p, li {
                 background-color: #A0A09F;
             }
             .sec5 {
-                background: url(../../dist/imgs/tsup.jpg) no-repeat center center fixed;
+                background: url(../imgs/tsup.jpg) no-repeat center center fixed;
                 background-size: cover;
                 position: relative;
                     .columns {
@@ -123,19 +138,5 @@ p, li {
                 padding: 1em;
             }
 }
-        
-.laws {
-    background: url(../../dist/imgs/bg-stone.png) repeat center center;
-    padding: 2em 0;
-}
-.benefits {
-    padding: 2em 0;
-    background-color: #242323;
-    color: #fff;
-        .columns {
-            @include flex;
-            @include flex-direction(column);
-            @include flex-align(justify, middle);
-        }
-}
+
             

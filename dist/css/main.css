@@ -1334,37 +1334,37 @@ h6 {
 
 h1 {
   font-size: 1.5rem;
-  line-height: 1.4;
+  line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h2 {
   font-size: 1.25rem;
-  line-height: 1.4;
+  line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h3 {
   font-size: 1.1875rem;
-  line-height: 1.4;
+  line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h4 {
   font-size: 1.125rem;
-  line-height: 1.4;
+  line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h5 {
   font-size: 1.0625rem;
-  line-height: 1.4;
+  line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h6 {
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
@@ -5542,37 +5542,37 @@ h6 {
 
 h1 {
   font-size: 1.5rem;
-  line-height: 1.4;
+  line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h2 {
   font-size: 1.25rem;
-  line-height: 1.4;
+  line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h3 {
   font-size: 1.1875rem;
-  line-height: 1.4;
+  line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h4 {
   font-size: 1.125rem;
-  line-height: 1.4;
+  line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h5 {
   font-size: 1.0625rem;
-  line-height: 1.4;
+  line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h6 {
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
@@ -8657,14 +8657,14 @@ a.thumbnail {
   .header .logo {
     width: 150px;
     height: 100px;
-    background-image: url(../../dist/imgs/logo.png);
+    background-image: url(../imgs/logo.png);
     background-repeat: no-repeat;
     -webkit-background-size: contain;
             background-size: contain; }
   .header .phone {
     color: #cc4b37; }
 
-body {
+html, body {
   overflow-x: hidden; }
 
 @media print, screen and (min-width: 64em) {
@@ -8675,9 +8675,10 @@ body {
   color: #fff; }
 
 .content .sec1 {
-  background: url(../../dist/imgs/dengi.jpg) no-repeat center center fixed;
+  background: url(../imgs/dengi.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
           background-size: cover;
+  background-attachment: scroll;
   padding-top: 4em;
   padding-bottom: 4em; }
   .content .sec1 .description {
@@ -8717,6 +8718,11 @@ body {
         width: 210px;
         margin: 0 auto;
         margin-bottom: 4em; } }
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      .content .sec1 .description {
+        width: 400px;
+        margin: 0 auto;
+        margin-bottom: 4em; } }
   .content .sec1 .slogan {
     background-color: #207EA9;
     position: relative;
@@ -8743,6 +8749,14 @@ body {
           border-left: 105px solid transparent;
           border-right: 100px solid transparent;
           border-top: 30px solid #207EA9; } }
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      .content .sec1 .slogan {
+        width: 420px;
+        margin: 0 auto; }
+        .content .sec1 .slogan:after {
+          top: 45px;
+          border-left: 210px solid transparent;
+          border-right: 210px solid transparent; } }
 
 .content .sec2, .content .sec10 {
   background-color: #242323; }
@@ -8751,7 +8765,7 @@ body {
   background-color: #A0A09F; }
 
 .content .sec5 {
-  background: url(../../dist/imgs/tsup.jpg) no-repeat center center fixed;
+  background: url(../imgs/tsup.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
           background-size: cover;
   position: relative; }
@@ -8781,39 +8795,8 @@ body {
 .content > div {
   padding: 1em; }
 
-.laws {
-  background: url(../../dist/imgs/bg-stone.png) repeat center center;
-  padding: 2em 0; }
-
-.benefits {
-  padding: 2em 0;
-  background-color: #242323;
-  color: #fff; }
-  .benefits .columns {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
-
 .footer {
   background-color: rgba(255, 255, 255, 0.6); }
-  .footer .top-bar {
-    background-color: #2B6CA3; }
-    .footer .top-bar .menu {
-      height: 1em;
-      background-color: #2B6CA3; }
-      .footer .top-bar .menu li a {
-        color: #fff; }
+  .footer .logo img {
+    width: 90px;
+    height: 90px; }
