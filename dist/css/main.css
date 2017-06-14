@@ -8660,8 +8660,7 @@ a.thumbnail {
     background-image: url(../../dist/imgs/logo.png);
     background-repeat: no-repeat;
     -webkit-background-size: contain;
-            background-size: contain;
-    background-position-y: -10px; }
+            background-size: contain; }
   .header .phone {
     color: #cc4b37; }
 
