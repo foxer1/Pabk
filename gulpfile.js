@@ -65,7 +65,7 @@ gulp.task('clean', function() {
     return del.sync('dist'); // Удаляем папку dist перед сборкой
 });
 
-gulp.task('serve', ['clean', 'app-sass', 'minify-css', 'libs-scripts', 'app-scripts', 'fonts'], function () {
+gulp.task('serve', ['clean', 'app-sass', 'minify-css', 'libs-scripts', 'app-scripts', 'img', 'fonts'], function () {
 
 });
 
@@ -76,7 +76,7 @@ gulp.task('build', ['clean', 'app-sass', 'minify-css', 'libs-scripts', 'app-scri
 
 });
 
-gulp.task('default', ['watch', 'serve']);
+gulp.task('default', ['watch', 'build']);
 gulp.task('clear', function () {
     return cache.clearAll();
 })

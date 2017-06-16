@@ -8671,6 +8671,11 @@ html, body {
   p, li {
     font-size: 20px; } }
 
+i {
+  font-size: 1.5rem;
+  margin-right: 0.4em;
+  color: #1779ba; }
+
 .content .sec1, .content .sec2, .content .sec5, .content .sec7, .content .sec10 {
   color: #fff; }
 
