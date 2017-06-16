@@ -6,12 +6,19 @@
     imagemin = require('gulp-imagemin'), 
     pngquant = require('imagemin-pngquant');
     del = require('del');
+    cleanCSS = require('gulp-clean-css');
 
 gulp.task('app-sass', function () {
     gulp.src('app/scss/main.scss')
         .pipe(sass())
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('dist/css'))
+});
+
+gulp.task('minify-css', () => {
+  return gulp.src('app/fonts/foundation-icons/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('libs-scripts', function() {
@@ -45,6 +52,11 @@ gulp.task('img', function() {
         .pipe(gulp.dest('dist/imgs')); // Выгружаем на продакшен
 });
 
+gulp.task('fonts', function() {
+    return gulp.src('app/fonts/foundation-icons/*.+(eot|ttf|svg|woff)')
+    .pipe(gulp.dest('dist/fonts'))
+});
+
 gulp.task('watch', function () {
     gulp.watch('app/scss/**/*.scss', ['app-sass']);
 });
@@ -53,11 +65,11 @@ gulp.task('clean', function() {
     return del.sync('dist'); // Удаляем папку dist перед сборкой
 });
 
-gulp.task('serve', ['clean', 'app-sass', 'libs-scripts', 'app-scripts',], function () {
+gulp.task('serve', ['clean', 'app-sass', 'minify-css', 'libs-scripts', 'app-scripts', 'fonts'], function () {
 
 });
 
-gulp.task('build', ['clean', 'app-sass', 'libs-scripts', 'app-scripts', 'img'], function () {
+gulp.task('build', ['clean', 'app-sass', 'minify-css', 'libs-scripts', 'app-scripts', 'img', 'fonts'], function () {
 
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
     .pipe(gulp.dest('dist'));
