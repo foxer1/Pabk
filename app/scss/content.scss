@@ -18,6 +18,11 @@ p, li {
              background-attachment: scroll;
              padding-top: 4em;
              padding-bottom: 4em;
+                h3 {
+                     @include breakpoint(medium only) {
+                         font-size: 1.5rem; 
+                     }
+                }
                  .description {
                     background-color: #3D9BE9;  
                     margin-bottom: 4em;

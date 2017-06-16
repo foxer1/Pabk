@@ -8681,6 +8681,9 @@ html, body {
   background-attachment: scroll;
   padding-top: 4em;
   padding-bottom: 4em; }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .content .sec1 h3 {
+      font-size: 1.5rem; } }
   .content .sec1 .description {
     background-color: #3D9BE9;
     margin-bottom: 4em;
