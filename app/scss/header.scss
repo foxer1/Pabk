@@ -6,9 +6,19 @@
             background-image: url(../imgs/logo_v1.png);
             background-repeat:  no-repeat;
             background-size: contain;
+                @include breakpoint( small only ) {
+                    width: 100px;
+                    height: 60px;
+                }
         }
-        .phone {
+        .contacts {
             color: $alert-color;
+            & > div > div {          
+                @include breakpoint( medium ) {
+                    @include flex;
+                    @include flex-align(right, middle);
+                }
+                }
         }
-
+        
 }
