@@ -7,12 +7,25 @@
     pngquant = require('imagemin-pngquant');
     del = require('del');
     cleanCSS = require('gulp-clean-css');
+    browserSync = require('browser-sync');
+
+gulp.task('browserSync', function() {
+  browserSync({
+    server: {
+      baseDir: "./dist"
+    },
+    port: 8080,
+    open: true,
+    notify: false
+  });
+});
 
 gulp.task('app-sass', function () {
     gulp.src('app/scss/main.scss')
         .pipe(sass())
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('dist/css'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('minify-css', function () {
@@ -58,7 +71,8 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('app/scss/**/*.scss', ['app-sass']);
+    gulp.watch('app/scss/**/*.scss', ['app-sass']).on('change', browserSync.reload);
+    gulp.watch("app/*.html").on('change', browserSync.reload);
 });
 
 gulp.task('clean', function() {
@@ -76,7 +90,7 @@ gulp.task('build', ['app-sass', 'img', 'fonts'], function () {
 
 });
 
-gulp.task('default', ['watch', 'build']);
+gulp.task('default', ['watch', 'build', 'browserSync']);
 gulp.task('clear', function () {
     return cache.clearAll();
 })

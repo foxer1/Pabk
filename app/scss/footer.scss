@@ -1,14 +1,28 @@
 .footer {
     background-color: rgba(255, 255, 255, 0.6);
-    padding: 1em;
+    padding: 0.5em;
         .logo {
             
             img {
-                width: 90px;
+                width: 150px;
                 height: 80px;
             }
         }
         .contacts {
-
+            i {
+                display: inline-flex;               
+            }
+            a {
+                color: $alert-color;
+                display: flex;
+            }
+            .phone {
+                 i:not(.icon-phone) {
+                    @include show-for(medium);
+                    @media screen and (orientation: landscape) and (max-width: 640px) {
+                            display: inline-flex!important; 
+                        }
+                }
+            }
         }  
 }

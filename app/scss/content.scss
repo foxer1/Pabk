@@ -70,6 +70,11 @@ i {
                              margin: 0 auto;
                              margin-bottom: 4em;
                         }
+                        @media screen and (orientation: landscape) and (max-width: 640px) {
+                             width: 400px;
+                             margin: 0 auto;
+                             margin-bottom: 4em;
+                        }
                 }
                 .slogan {
                     background-color: #207EA9;
@@ -103,7 +108,16 @@ i {
                              width: 420px;
                              margin: 0 auto;
                              &:after {
-                                 top: 45px;
+                                 top: 44px;
+                                 border-left: 210px solid transparent;
+                                 border-right: 210px solid transparent;
+                             }
+                        }
+                        @media screen and (orientation: landscape) and (max-width: 640px) {
+                             width: 420px;
+                             margin: 0 auto;
+                             &:after {
+                                 top: 44px;
                                  border-left: 210px solid transparent;
                                  border-right: 210px solid transparent;
                              }

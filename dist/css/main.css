@@ -8890,11 +8890,12 @@ a.thumbnail {
             order: 6; } }
 
 .header {
-  background-color: #fff; }
+  background-color: #fff;
+  padding: 0.5em; }
   .header .logo {
     width: 150px;
-    height: 100px;
-    background-image: url(../imgs/logo_v1.png);
+    height: 80px;
+    background-image: url(../imgs/logo_v2.jpg);
     background-repeat: no-repeat;
     -webkit-background-size: contain;
             background-size: contain; }
@@ -8904,6 +8905,28 @@ a.thumbnail {
         height: 60px; } }
   .header .contacts {
     color: #cc4b37; }
+    .header .contacts i {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex; }
+    .header .contacts a {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      color: #cc4b37; }
+    .header .contacts .number span {
+      line-height: 2em; }
+    @media screen and (max-width: 39.9375em) {
+      .header .contacts .number i:not(.icon-phone) {
+        display: none !important; } }
+    @media screen and (orientation: landscape) and (max-width: 640px) {
+      .header .contacts .number i:not(.icon-phone) {
+        display: -webkit-inline-box !important;
+        display: -webkit-inline-flex !important;
+        display: -ms-inline-flexbox !important;
+        display: inline-flex !important; } }
     @media print, screen and (min-width: 40em) {
       .header .contacts > div > div {
         display: -webkit-box;
@@ -8987,6 +9010,11 @@ i {
         width: 400px;
         margin: 0 auto;
         margin-bottom: 4em; } }
+    @media screen and (orientation: landscape) and (max-width: 640px) {
+      .content .sec1 .description {
+        width: 400px;
+        margin: 0 auto;
+        margin-bottom: 4em; } }
   .content .sec1 .slogan {
     background-color: #207EA9;
     position: relative;
@@ -9018,7 +9046,15 @@ i {
         width: 420px;
         margin: 0 auto; }
         .content .sec1 .slogan:after {
-          top: 45px;
+          top: 44px;
+          border-left: 210px solid transparent;
+          border-right: 210px solid transparent; } }
+    @media screen and (orientation: landscape) and (max-width: 640px) {
+      .content .sec1 .slogan {
+        width: 420px;
+        margin: 0 auto; }
+        .content .sec1 .slogan:after {
+          top: 44px;
           border-left: 210px solid transparent;
           border-right: 210px solid transparent; } }
 
@@ -9061,7 +9097,27 @@ i {
 
 .footer {
   background-color: rgba(255, 255, 255, 0.6);
-  padding: 1em; }
+  padding: 0.5em; }
   .footer .logo img {
-    width: 90px;
+    width: 150px;
     height: 80px; }
+  .footer .contacts i {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex; }
+  .footer .contacts a {
+    color: #cc4b37;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  @media screen and (max-width: 39.9375em) {
+    .footer .contacts .phone i:not(.icon-phone) {
+      display: none !important; } }
+  @media screen and (orientation: landscape) and (max-width: 640px) {
+    .footer .contacts .phone i:not(.icon-phone) {
+      display: -webkit-inline-box !important;
+      display: -webkit-inline-flex !important;
+      display: -ms-inline-flexbox !important;
+      display: inline-flex !important; } }
