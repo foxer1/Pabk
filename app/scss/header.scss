@@ -22,14 +22,17 @@
                 color: $alert-color;
             }
             .number { 
+                margin-bottom: 0.5em;
                 span {
                     line-height: 2em;
-                }
-                i:not(.icon-phone) {
                     @include show-for(medium);
                     @media screen and (orientation: landscape) and (max-width: 640px) {
                             display: inline-flex!important; 
                         }
+                }
+                i:not(.icon-phone) {
+
+                    
                 }
             }
 

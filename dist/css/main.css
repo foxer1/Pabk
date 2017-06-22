@@ -8916,17 +8916,19 @@ a.thumbnail {
       display: -ms-flexbox;
       display: flex;
       color: #cc4b37; }
-    .header .contacts .number span {
-      line-height: 2em; }
-    @media screen and (max-width: 39.9375em) {
-      .header .contacts .number i:not(.icon-phone) {
-        display: none !important; } }
-    @media screen and (orientation: landscape) and (max-width: 640px) {
-      .header .contacts .number i:not(.icon-phone) {
-        display: -webkit-inline-box !important;
-        display: -webkit-inline-flex !important;
-        display: -ms-inline-flexbox !important;
-        display: inline-flex !important; } }
+    .header .contacts .number {
+      margin-bottom: 0.5em; }
+      .header .contacts .number span {
+        line-height: 2em; }
+        @media screen and (max-width: 39.9375em) {
+          .header .contacts .number span {
+            display: none !important; } }
+        @media screen and (orientation: landscape) and (max-width: 640px) {
+          .header .contacts .number span {
+            display: -webkit-inline-box !important;
+            display: -webkit-inline-flex !important;
+            display: -ms-inline-flexbox !important;
+            display: inline-flex !important; } }
     @media print, screen and (min-width: 40em) {
       .header .contacts > div > div {
         display: -webkit-box;
@@ -8945,6 +8947,10 @@ a.thumbnail {
 html, body {
   overflow-x: hidden; }
 
+* {
+  min-height: 0;
+  min-width: 0; }
+
 @media print, screen and (min-width: 64em) {
   p, li {
     font-size: 20px; } }
@@ -8954,7 +8960,7 @@ i {
   margin-right: 0.4em;
   color: #1779ba; }
 
-.content .sec1, .content .sec2, .content .sec5, .content .sec7, .content .sec10 {
+.content .sec1, .content .sec2, .content .sec5, .content .sec7, .content .sec10, .content .sec12 {
   color: #fff; }
 
 .content .sec1 {
@@ -9081,9 +9087,9 @@ i {
     height: 100%;
     background: rgba(0, 0, 0, 0.6); }
 
-.content .sec7 {
+.content .sec7, .content .sec12 {
   background-color: #242323; }
-  .content .sec7 h5, .content .sec7 .form-descr {
+  .content .sec7 h5, .content .sec7 .form-descr, .content .sec12 h5, .content .sec12 .form-descr {
     color: #1779ba; }
 
 .content .sec3, .content .sec6, .content .sec8, .content .sec11 {
@@ -9091,6 +9097,18 @@ i {
 
 .content .sec9 {
   background-color: #ffffff; }
+
+.content .sec12 .slider {
+  height: 100%;
+  background-color: #242323; }
+  .content .sec12 .slider .slick-prev {
+    left: -13px; }
+  .content .sec12 .slider .slick-next {
+    right: -13px; }
+  .content .sec12 .slider .slick-dots {
+    left: 0; }
+    .content .sec12 .slider .slick-dots button:before {
+      color: #fff; }
 
 .content > div {
   padding: 1em; }

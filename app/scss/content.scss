@@ -1,7 +1,10 @@
 html, body {
     overflow-x: hidden;
 }
-
+*{
+    min-height: 0;
+    min-width: 0;
+}
 p, li {
     @include breakpoint(large) {
         font-size: 20px;
@@ -14,7 +17,7 @@ i {
     color: $primary-color;
 }
 .content {
-        .sec1, .sec2, .sec5, .sec7, .sec10 {
+        .sec1, .sec2, .sec5, .sec7, .sec10, .sec12 {
             color: #fff;
         }
         .sec1 {
@@ -147,17 +150,44 @@ i {
                         background: rgba(0,0,0,0.6);
                     }
             }
-            .sec7 {
+            .sec7, .sec12  {
                 background-color: #242323;
                     h5, .form-descr {
                         color: $primary-color;
                     }
             }
-            .sec3, .sec6, .sec8, .sec11 {
+            .sec3, .sec6, .sec8, .sec11{
                 background-color: #cccccc;
             }
             .sec9 {
                 background-color: #ffffff;
+            }
+            .sec12 {
+                .slider {
+                    height: 100%;
+                    background-color: #242323;
+                    .slick-prev {
+                        left: -13px;
+                    }
+                    .slick-next {
+                        right: -13px;
+                    }
+                    .slick-dots {
+                        left: 0;
+                        button:before {
+                            color: #fff;
+                        }
+                        
+                    }
+                }
+                img {
+                        @include breakpoint(medium only) {
+                     //       max-width: 60%; 
+                        }
+                       @include breakpoint(small only) {
+                  //          max-width: 20%; 
+                        }
+                }
             }
             & > div {
                 padding: 1em;
