@@ -4,7 +4,7 @@
         .logo {
             width: 150px;
             height: 80px;
-            background-image: url(../imgs/logo_v2.jpg);
+            background-image: url(../imgs/logo_light.png);
             background-repeat:  no-repeat;
             background-size: contain;
                 @include breakpoint( small only ) {

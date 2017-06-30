@@ -6,6 +6,7 @@ $(document).ready(function () {
         dots: true,
         rows: 4,
         slidesPerRow: 6,
+
         responsive: [
             {
                 breakpoint: 1024,
