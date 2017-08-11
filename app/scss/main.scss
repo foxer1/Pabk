@@ -3,6 +3,7 @@
 
 @include foundation-everything(true);
 
+@import 'typography';
 @import 'header';
 @import 'content';
 @import 'footer';

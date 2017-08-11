@@ -1,47 +1,88 @@
 .header {
     background-color: #fff;
-    padding: 0.5em;
-        .logo {
-            width: 150px;
-            height: 80px;
-            background-image: url(../imgs/logo_light.png);
-            background-repeat:  no-repeat;
-            background-size: contain;
-                @include breakpoint( small only ) {
-                    width: 100px;
-                    height: 60px;
-                }
+    height: 100%!important;
+    .title-bar {
+        width: 100%;
+        z-index: 10;
+        height: 8.5em;
+        background-color: #fff;
+        transition: height 0.2s ease-in;
+        @include breakpoint( small only) {
+            height: 5.5em;
         }
-        .contacts {
-            color: $alert-color; 
-            i {
-                display: inline-flex;
+        img {
+            transition: all 0.2s ease-in;
+        }
+        &>div {
+            width: 100%;
+        }
+        &.shrink {
+            height: 3.5em;
+            padding: 0;
+            opacity: 0.8;
+            position: fixed;
+            &.title-bar-right,
+            .title-bar-left {
+                padding-top: 0em;
             }
-            a {
-                display: flex;
-                color: $alert-color;
+            .row.align-middle {
+                height: 3em;
             }
-            .number { 
-                margin-bottom: 0.5em;
-                span {
-                    line-height: 2em;
-                    @include show-for(medium);
-                    @media screen and (orientation: landscape) and (max-width: 640px) {
-                            display: inline-flex!important; 
+            .logo {
+                img {
+                    @include breakpoint( large) {
+                        max-width: 30%;
+                    }
+                    @include breakpoint( medium only) {
+                        max-width: 40%;
+                    }
+                    @include breakpoint( small only) {
+                        max-width: 80%;
+                    }
+                    @include breakpoint(landscape) {
+                        @include breakpoint( small only) {
+                            max-width: 60%;
                         }
-                }
-                i:not(.icon-phone) {
-
-                    
+                    }
                 }
             }
-
-            & > div > div {          
-                @include breakpoint( medium ) {
-                    @include flex;
-                    @include flex-align(right, middle);
-                }
-                }
         }
-        
+    }
+    .contacts {
+        color: $alert-color;
+        a {
+            margin-right: 25px;
+            @include breakpoint( small only ) {
+                margin-right: 10px;
+            }
+            &.whatsup {
+                width: 23px;
+                height: 23px;
+                background: url('../imgs/icon_sprites-min.png') -10px -10px;
+            }
+            &.mail {
+                width: 23px;
+                height: 23px;
+                background: url('../imgs/icon_sprites-min.png') -53px -53px;
+            }
+            &.telegram {
+                height: 23px;
+                background: url('../imgs/icon_sprites-min.png') -96px -96px;
+                display: flex;
+                align-items: center;
+                span {
+                    margin-left: 35px;
+                    color: #242323;
+                    font-weight: 600;
+                }
+            }
+        }
+        &>div>div {
+            @include breakpoint( medium) {
+                @include flex;
+                @include flex-align(right,
+                middle);
+            }
+        }
+    }
 }

@@ -1,28 +1,90 @@
 .footer {
-    background-color: rgba(255, 255, 255, 0.6);
-    padding: 0.5em;
+    background-color: #2e2e2e;
+    padding: 2.5em;
+    color: #fff;
+    @include breakpoint(medium down) {
+        padding: 1em 0;
+        img {
+            max-width: 80%;
+        }
+    }
+    .footer-info {
+        .logo-footer {
+            position: relative;
+            box-sizing: content-box;
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                height: 100%;
+                width: 1px;
+                background-color: #646464;
+                right: 1em;
+                top: 0;
+                @include breakpoint(medium only) {
+                    left: -15%;
+                }
+                @include breakpoint(xlarge) {
+                    right: 2em;
+                }
+                @include breakpoint(landscape) {
+                    @include breakpoint(medium down) {
+                        display: none;
+                    }
+                }
+            }
+        }
         .logo {
-            
-            img {
-                width: 150px;
-                height: 80px;
+            p {
+                margin: 0;
+                position: relative;
+                color: #646464;
+                font-weight: 400;
+            }
+            @include breakpoint(portrait) {
+                @include breakpoint(small only) {
+                    display: none;
+                }
             }
         }
         .contacts {
-            i {
-                display: inline-flex;               
-            }
-            a {
-                color: $alert-color;
-                display: flex;
-            }
-            .phone {
-                 i:not(.icon-phone) {
-                    @include show-for(medium);
-                    @media screen and (orientation: landscape) and (max-width: 640px) {
-                            display: inline-flex!important; 
-                        }
+            @include breakpoint(portrait) {
+                @include breakpoint(small only) {
+                    @include grid-column(12);
                 }
             }
-        }  
+            .number {
+                @include breakpoint(portrait) {
+                    @include breakpoint(small only) {
+                        justify-content: center;
+                        padding-left: 2em;
+                    }
+                }
+            }
+            a {
+                margin-right: 25px;
+                &.whatsup {
+                    width: 23px;
+                    height: 23px;
+                    background: url('../imgs/icon_sprites-min.png') -10px -10px;
+                }
+                &.mail {
+                    width: 23px;
+                    height: 23px;
+                    background: url('../imgs/icon_sprites-min.png') -53px -53px;
+                }
+                &.telegram {
+                    height: 23px;
+                    background: url('../imgs/icon_sprites-min.png') -96px -96px;
+                    display: flex;
+                    align-items: center;
+                    span {
+                        color: #646464;
+                        font-weight: 600;
+                        margin-left: 35px;
+                    }
+                }
+            }
+        }
+    }
 }
